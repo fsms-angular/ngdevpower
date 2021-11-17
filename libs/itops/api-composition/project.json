@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/itops/api-composition",
+  "sourceRoot": "libs/itops/api-composition/src",
+  "prefix": "fsms-ndp-ac",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/itops/api-composition"],
+      "options": {
+        "project": "libs/itops/api-composition/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/itops/api-composition/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/itops/api-composition/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/itops/api-composition/src/test.ts",
+        "tsConfig": "libs/itops/api-composition/tsconfig.spec.json",
+        "karmaConfig": "libs/itops/api-composition/karma.conf.js"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/itops/api-composition/src/**/*.ts",
+          "libs/itops/api-composition/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:branding", "type:api-composition"]
+}

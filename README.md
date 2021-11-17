@@ -8,6 +8,16 @@ This project was generated using [Nx](https://nx.dev).
 
 🔎 **Smart, Extensible Build Framework**
 
+## Nx CLI scripts
+
+### Adding new itops angular library
+
+```
+
+nx generate @nrwl/angular:library --buildable --publishable --name=api-composition --directory=itops --linter=eslint --importPath=@fsms-angular/api-composition --prefix=fsms-ndp-ac --tags="scope:branding,type:api-composition" --unitTestRunner=karma --no-interactive --dry-run
+
+```
+
 ## Adding capabilities to your workspace
 
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
